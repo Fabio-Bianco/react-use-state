@@ -45,7 +45,7 @@
   font-weight: bold;
 }
 
-/* Card dettaglio linguaggio */
+/* Card dettaglio */
 .language-card {
   border: 1px solid #ccc;
   padding: 1.2rem;
@@ -53,14 +53,14 @@
   background-color: #ffffff;
 }
 
-/* Titolo nella card */
+/* Titolo card */
 .lang-title {
   font-size: 1.4rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
-/* Paragrafo nella card */
+/* Paragrafo card */
 .lang-description {
   font-size: 1rem;
   line-height: 1.5;
