@@ -1,3 +1,15 @@
-// file che contiene lo stato e mette insieme bottoni e card (contiene la logica)
+import languages from "../data/languages";
 
-import languages from '../data/languages.json';
+export default function LanguageSelector() {
+  return (
+    <div>
+      <h1>Linguaggi Web</h1>
+
+      <ul>
+        {languages.map((lang) => (
+          <li key={lang.id}>{lang.title}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
