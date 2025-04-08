@@ -1,6 +1,8 @@
 import { useState } from "react";
 import languages from "../data/languages";
 import LanguageButton from "./LanguageButton";
+import LanguageCard from "./LanguageCard";
+
 
 export default function LanguageSelector() {
   // Stato che tiene traccia del linguaggio selezionato
@@ -32,16 +34,8 @@ export default function LanguageSelector() {
       </div>
 
       {/* Sezione card */}
-      <div className="language-card">
-        {selectedLang ? (
-          <>
-            <h2 className="lang-title">{selectedLang.title}</h2>
-            <p className="lang-description">{selectedLang.description}</p>
-          </>
-        ) : (
-          <p className="no-selection"><em>Nessun linguaggio selezionato</em></p>
-        )}
-      </div>
+      <LanguageCard language={selectedLang} />
+
     </div>
   );
 }
