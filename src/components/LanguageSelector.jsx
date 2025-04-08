@@ -3,22 +3,18 @@ import languages from "../data/languages";
 import LanguageButton from "./LanguageButton";
 import LanguageCard from "./LanguageCard";
 
-
 export default function LanguageSelector() {
-  // Stato che tiene traccia del linguaggio selezionato
-  // Parte da "null" → quindi nessun linguaggio è selezionato all'inizio
+  // Stato: linguaggio selezionato (null = niente selezionato)
   const [selectedLang, setSelectedLang] = useState(null);
 
-  // Ogni volta che il componente viene renderizzato, stampiamo lo stato attuale
-  console.log(" Render del componente LanguageSelector.");
-  console.log(" Linguaggio attualmente selezionato:", selectedLang);
+  // Ogni render stampiamo lo stato attuale
+  console.log("🔄 Render. selectedLang:", selectedLang);
 
   return (
     <div className="language-selector">
       <h1 className="main-title">Learn Web development</h1>
-      {/* Sezione sottotitolo */}
-      <h2 className="subtitle">Select a language to start learning:</h2>
-      {/* 🔘 Sezione bottoni */}
+
+      {/* Lista di bottoni */}
       <div className="button-container">
         {languages.map((lang) => (
           <LanguageButton
@@ -26,16 +22,21 @@ export default function LanguageSelector() {
             title={lang.title}
             isActive={selectedLang?.title === lang.title}
             onClick={() => {
-              console.log("👆 Hai cliccato:", lang.title);
-              setSelectedLang(lang);
+              // 🔁 Toggle logica: se è già selezionato, lo deseleziona
+              if (selectedLang?.title === lang.title) {
+                console.log("🔁 Reset linguaggio:", lang.title);
+                setSelectedLang(null);
+              } else {
+                console.log("✅ Selezionato:", lang.title);
+                setSelectedLang(lang);
+              }
             }}
           />
         ))}
       </div>
 
-      {/* Sezione card */}
+      {/* Card sotto */}
       <LanguageCard language={selectedLang} />
-
     </div>
   );
 }
