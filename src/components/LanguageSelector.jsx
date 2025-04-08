@@ -2,13 +2,15 @@ import { useState } from "react";
 import languages from "../data/languages";
 import LanguageButton from "./LanguageButton";
 import LanguageCard from "./LanguageCard";
+import './LanguageSelector.css';
+
 
 export default function LanguageSelector() {
   // Stato: linguaggio selezionato (null = niente selezionato)
   const [selectedLang, setSelectedLang] = useState(null);
 
   // Ogni render stampiamo lo stato attuale
-  console.log("🔄 Render. selectedLang:", selectedLang);
+  console.log(" Render. selectedLang:", selectedLang);
 
   return (
     <div className="language-selector">

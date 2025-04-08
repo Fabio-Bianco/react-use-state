@@ -1,50 +1,74 @@
-
+/* Contenitore principale */
 .language-selector {
-    padding: 1rem;
-    font-family: sans-serif;
-  }
-  
-  .main-title {
-    font-size: 24px;
-    margin-bottom: 1rem;
-  }
-  
-  .button-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .lang-button {
-    padding: 0.5rem 1rem;
-    background-color: #2196f3;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: 0.2s;
-  }
-  
-  .lang-button.active {
-    background-color: gold;
-    color: black;
-  }
-  
-  .language-card {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-  }
-  
-  .lang-title {
-    font-size: 20px;
-    margin-bottom: 0.5rem;
-  }
-  
-  .no-selection {
-    color: #999;
-    font-style: italic;
-  }
-  
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Titolo principale */
+.main-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+/* Contenitore dei bottoni */
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Stile base dei bottoni */
+.lang-button {
+  padding: 0.5rem 1.2rem;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* Hover effetto */
+.lang-button:hover {
+  background-color: #0b5ed7;
+}
+
+/* Bottone attivo */
+.lang-button.active {
+  background-color: gold;
+  color: black;
+  font-weight: bold;
+}
+
+/* Card dettaglio linguaggio */
+.language-card {
+  border: 1px solid #ccc;
+  padding: 1.2rem;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+/* Titolo nella card */
+.lang-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Paragrafo nella card */
+.lang-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Testo fallback */
+.no-selection {
+  color: #888;
+  font-style: italic;
+}
