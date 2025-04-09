@@ -1,7 +1,7 @@
 
 // contiene la crad con la descrizione del linguaggio selezionato
  const LanguageCard =({ language }) => {
-    console.log("🧾 Rendering LanguageCard:", language);
+    console.log(" Rendering LanguageCard:", language);
   
     if (!language) {
       return (
