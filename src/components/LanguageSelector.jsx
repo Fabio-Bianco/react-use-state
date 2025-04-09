@@ -5,7 +5,7 @@ import LanguageCard from "./LanguageCard";
 import './LanguageSelector.css';
 
 
-export default function LanguageSelector() {
+const LanguageSelector = () => {
   // Stato: linguaggio selezionato (null = niente selezionato)
   const [selectedLang, setSelectedLang] = useState(null);
 
@@ -22,14 +22,14 @@ export default function LanguageSelector() {
           <LanguageButton
             key={lang.id}
             title={lang.title}
-            isActive={selectedLang?.title === lang.title}
+            isActive={selectedLang ?. title === lang.title}
             onClick={() => {
-              // 🔁 Toggle logica: se è già selezionato, lo deseleziona
-              if (selectedLang?.title === lang.title) {
-                console.log("🔁 Reset linguaggio:", lang.title);
+              //  Toggle logica: se è già selezionato, lo deseleziona
+              if (selectedLang ?. title === lang.title) {
+                console.log("Reset linguaggio:", lang.title);
                 setSelectedLang(null);
               } else {
-                console.log("✅ Selezionato:", lang.title);
+                console.log("Selezionato:", lang.title);
                 setSelectedLang(lang);
               }
             }}
@@ -42,3 +42,6 @@ export default function LanguageSelector() {
     </div>
   );
 }
+
+
+export default  LanguageSelector;

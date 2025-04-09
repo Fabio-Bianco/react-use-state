@@ -1,6 +1,6 @@
 
 // contiene la crad con la descrizione del linguaggio selezionato
-export default function LanguageCard({ language }) {
+ const LanguageCard =({ language }) => {
     console.log("🧾 Rendering LanguageCard:", language);
   
     if (!language) {
@@ -20,4 +20,4 @@ export default function LanguageCard({ language }) {
       </div>
     );
   }
-  
+  export default LanguageCard;

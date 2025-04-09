@@ -1,8 +1,8 @@
 
 // file che gestisce i bottoni dei vari lingiaggi
 
-export default function LanguageButton({ title, isActive, onClick }) {
-    console.log("🎯 Rendering LanguageButton:", title, "isActive:", isActive);
+const LanguageButton = ({ title, isActive, onClick }) => {
+    console.log(" Rendering LanguageButton:", title, "isActive:", isActive);
   
     return (
       <button
@@ -13,3 +13,5 @@ export default function LanguageButton({ title, isActive, onClick }) {
       </button>
     );
   }
+
+  export default  LanguageButton;
